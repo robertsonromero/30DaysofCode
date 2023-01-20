@@ -1,0 +1,36 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <map>
+using namespace std;
+map<string,int> my_Map;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int n;
+    cin >> n;
+    cin.clear();
+    string name;
+    int number;
+    
+    int line_num = 1;
+    string line;
+    
+    for(int i =0 ; i < n; i ++){
+        cin >> name >> number;
+        my_Map.insert(pair<string,int>(name,number));
+    }
+    
+    while(cin >> line){
+        if (my_Map.find(line) != my_Map.end()){
+            cout << line << "=" << my_Map[line] << endl;
+        }
+        else {
+            cout << "Not found" << endl;
+        }
+    }
+    
+    return 0;
+}
