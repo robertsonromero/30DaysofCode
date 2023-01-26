@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int main()
+{
+    string S;
+    getline(cin, S);
+    
+    //-------My Code------
+    try {
+    cout << stoi(S);
+    } catch (invalid_argument& ia) {
+        cout << "Bad String";
+    }
+
+}
